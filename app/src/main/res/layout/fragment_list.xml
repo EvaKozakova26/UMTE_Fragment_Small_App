@@ -15,28 +15,37 @@
         />
 
     <Button
-        android:id="@+id/btnSubjects"
+        android:id="@+id/btnSubjectKIKM"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Předměty"/>
+        android:text="Předměty KIKM"/>
 
     <Button
-        android:id="@+id/btnTeachers"
+        android:id="@+id/btnSubjectsKIT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Učitelé"/>
+        android:text="Předměty KIT"/>
 
     <Button
-        android:id="@+id/btnExams"
+        android:id="@+id/btnSubjectKAL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Zkoušky"/>
-
+        android:text="Předměty KAL"/>
     <Button
         android:id="@+id/btnOptions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nastavení"/>
+        android:text="settings"/>
+    <Button
+        android:id="@+id/btnExams"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="exams"/>
+    <Button
+        android:id="@+id/btnTeachers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="teachers"/>
 
 
 </LinearLayout>

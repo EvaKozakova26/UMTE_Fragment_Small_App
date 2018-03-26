@@ -30,9 +30,11 @@ public class ListFragment extends Fragment implements View.OnClickListener {
 
         // obecna onLCokc metoda, kde rozlisuju ID
         view.findViewById(R.id.btnExams).setOnClickListener(this);
-        view.findViewById(R.id.btnSubjects).setOnClickListener(this);
         view.findViewById(R.id.btnTeachers).setOnClickListener(this);
         view.findViewById(R.id.btnOptions).setOnClickListener(this);
+        view.findViewById(R.id.btnSubjectKIKM).setOnClickListener(this);
+        view.findViewById(R.id.btnSubjectsKIT).setOnClickListener(this);
+        view.findViewById(R.id.btnSubjectKAL).setOnClickListener(this);
 
 
 

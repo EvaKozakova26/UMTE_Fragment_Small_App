@@ -33,17 +33,23 @@ public class MainActivity extends AppCompatActivity implements ListFragment.OnMe
                         .replace(R.id.fragmentContainer, teacherFragment) // kam to chci a co
                         .commit();
                 break;
-            case R.id.btnSubjects:
-                // TODO - detail fragment s predmetem
-                SubjectFragment subjectFragment = new SubjectFragment();
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentContainer, subjectFragment) // kam to chci a co
-                        .commit();
-                break;
             case R.id.btnOptions:
                 OptionsFragment optionsFragment = new OptionsFragment();
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.fragmentContainer, optionsFragment) // kam to chci a co
+                        .commit();
+                break;
+            case R.id.btnSubjectKIKM:
+            case R.id.btnSubjectsKIT:
+            case R.id.btnSubjectKAL:
+                SubjectFragment subjectFragment = new SubjectFragment();
+
+
+                Bundle bundle = new Bundle();
+                bundle.putInt("type", view.getId()); // vezme id tlacitka
+                subjectFragment.setArguments(bundle);
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainer, subjectFragment) // kam to chci a co
                         .commit();
                 break;
         }
