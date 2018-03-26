@@ -1,33 +1,19 @@
 package cz.uhk.fim.kozakev1.fragmentsmallapp;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements ListFragment.OnMenuItemSelectedInterface{
-
-    private boolean isLandscape;
+public class DetailSectionActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_detail_section);
 
-        // udalosti volam z aktivity, ne z fragmentu
-       ListFragment fragmentList = (ListFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentList);
-       fragmentList.setOnMenuItemSelectedInterface(this);
+       int section = getIntent().getIntExtra("section", 0);
 
-       if (findViewById(R.id.fragmentContainer) != null) {
-           isLandscape = true;
-       }
-
-    }
-
-    public void onMenuItemSelected(View view) {
-        if (isLandscape) {
-        switch (view.getId()) {
+        switch (section) {
             case R.id.btnExams:
                 ExamFragment examFragment = new ExamFragment();
                 getSupportFragmentManager().beginTransaction()
@@ -54,20 +40,13 @@ public class MainActivity extends AppCompatActivity implements ListFragment.OnMe
 
 
                 Bundle bundle = new Bundle();
-                bundle.putInt("type", view.getId()); // vezme id tlacitka
+                bundle.putInt("type", section); // vezme id tlacitka
                 subjectFragment.setArguments(bundle);
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.fragmentContainer, subjectFragment) // kam to chci a co
                         .commit();
                 break;
         }
-    } else {
-            /// neni landscape tudiz nova aktivita
-            Intent intent = new Intent(this, DetailSectionActivity.class);
-            intent.putExtra("section", view.getId());
-            //jaky budu zobrazovat fragment
 
-            startActivity(intent);
-        }
     }
 }
