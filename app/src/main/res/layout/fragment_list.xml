@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cz.uhk.fim.kozakev1.fragmentsmallapp.ListFragment"
+    android:orientation="vertical"
+    android:background="@color/colorBackground">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ListFragemnt"
+        />
+
+    <Button
+        android:id="@+id/btnSubjects"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Předměty"/>
+
+    <Button
+        android:id="@+id/btnTeachers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Učitelé"/>
+
+    <Button
+        android:id="@+id/btnExams"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Zkoušky"/>
+
+    <Button
+        android:id="@+id/btnOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nastavení"/>
+
+
+</LinearLayout>

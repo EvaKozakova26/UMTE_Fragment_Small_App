@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorBackground">#aba7cc</color>
+    <color name="colorSubject">#daa7ac</color>
+    <color name="colorExams">#12a7ff</color>
+    <color name="colorOptions">#65a7cc</color>
+    <color name="colorTeachers">#a457cc</color>
+</resources>
